@@ -326,8 +326,16 @@ resource "yandex_lb_network_load_balancer" "k8s-load-balancer" {
 
 # Backet for storing cluster backups
 
+# Создаем рандомное имя для хранилища
+resource "random_string" "bucket_prefix" {
+  length = 7
+  special = false
+  numeric = false
+  upper = false
+}
+
 resource "yandex_storage_bucket" "backup-backet" {
-  bucket = "backup-backet"
+  bucket = "backup-backet-${random_string.bucket_prefix.result}"
   force_destroy = true
   access_key = yandex_iam_service_account_static_access_key.static-access-key.access_key
   secret_key = yandex_iam_service_account_static_access_key.static-access-key.secret_key
