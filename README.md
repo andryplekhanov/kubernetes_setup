@@ -2,6 +2,8 @@
 
 fork from https://git.cloud-team.ru/lections/kubernetes_setup
 
+video: https://youtu.be/WFXlr0bVTAQ?si=HACvDnQ5ZmwnYXy7
+
 ## Register in Yandex Cloud
 
 https://cloud.yandex.ru
