@@ -1,5 +1,7 @@
 # Install k8s cluster with Kubespray on Yandex Cloud
 
+fork from https://git.cloud-team.ru/lections/kubernetes_setup
+
 ## Register in Yandex Cloud
 
 https://cloud.yandex.ru
